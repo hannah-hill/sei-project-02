@@ -1,0 +1,19 @@
+nav {
+  margin: 20px 0px;
+  background-color: blue;
+  width: 100vw;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      list-style: none;
+
+      a {
+        font-size: 20px;
+        color: white;
+      }
+    }
+  }
+}

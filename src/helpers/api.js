@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export const getFlightData = async (data) => {
+export const getEstimate = async (data) => {
   const config = {
     method: 'post',
     url: 'https://www.carboninterface.com/api/v1/estimates',

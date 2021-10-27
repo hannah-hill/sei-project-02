@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import { getFlightData } from '../helpers/api.js'
+import { getEstimate } from '../helpers/api.js'
 
 const Flights = () => {
   const [errorMessage, setErrorMessage] = useState({})
@@ -12,7 +12,7 @@ const Flights = () => {
     legs: [
       {
         departure_airport: 'lhr',
-        destination_airport: 'jfk',
+        destination_airport: 'cdg',
       },
     ],
   })
@@ -29,6 +29,25 @@ const Flights = () => {
     })
   }
 
+  const handleDepartureAirportChange = (event) => {
+    data.legs[0].departure_airport = event.target.value
+  }
+
+  const handleDestinationAirportChange = (event) => {
+    data.legs[0].destination_airport = event.target.value
+  }
+
+  const handleReturnJourney = (event) => {
+    if (event.target.value === 'one-way') {
+      return
+    } else if (event.target.value === 'return') {
+      data.legs.push({
+        departure_airport: data.legs[0].destination_airport,
+        destination_airport: data.legs[0].departure_airport,
+      })
+    }
+  }
+
   const handleError = (error) => {
     if (error.response) {
       setErrorMessage(error.response.data)
@@ -37,15 +56,8 @@ const Flights = () => {
   }
 
   const handleSubmit = async (event) => {
-    // event.preventDefault()
-    // getFlightData(data).then(setResult).catch(handleError)
-
     event.preventDefault()
-    getFlightData(data).then(setResult).catch(handleError)
-
-    //   try {
-    //     const response = await axios(config).catch(handleError)
-    //   }
+    getEstimate(data).then(setResult).catch(handleError)
   }
 
   console.log(result)
@@ -53,7 +65,7 @@ const Flights = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className='flight-form'>
           <label for='passengers'>Number of passengers:</label>
           <input
             type='number'
@@ -61,6 +73,38 @@ const Flights = () => {
             value={data.passengers}
             onChange={handleFormChange}
           />
+          <label for='departure airport'>Departure airport:</label>
+          <input
+            type='text'
+            placeholder='Where are you flying from?'
+            name='departure airport'
+            onChange={handleDepartureAirportChange}
+          />
+          <label for='arrival airport'>Arrival airport:</label>
+          <input
+            type='text'
+            placeholder='Where are you flying to?'
+            name='arrival airport'
+            onChange={handleDestinationAirportChange}
+          />
+          <div>
+            <label for='one-way'>One-way</label>
+            <input
+              type='radio'
+              id='one-way'
+              name='legs'
+              value='one-way'
+              onChange={handleReturnJourney}
+            />
+            <label for='return'>Return</label>
+            <input
+              type='radio'
+              id='return'
+              name='legs'
+              value='return'
+              onChange={handleReturnJourney}
+            />
+          </div>
           <input type='submit' value='submit flight info' />
         </div>
       </form>
