@@ -11,10 +11,11 @@ header {
 h1 {
   position: relative;
   top: 20px;
+  font-family: $header;
 }
 
 .plane {
-  background-image: url("../assets/plane.png");
+  background-image: url('../assets/plane.png');
   background-size: contain;
   height: 150px;
   width: 100px;
