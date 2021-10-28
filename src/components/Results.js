@@ -1,13 +1,8 @@
 import { TickerBoard } from 'ticker-board'
 import { useEffect, useState } from 'react'
 
-const Results = ({
-  oneway,
-  departure_airport,
-  destination_airport,
-  distance,
-  carbon,
-}) => {
+const Results = ({carbon_kg, distance_value}) => {
+ 
   const [legs, setLegs] = useState('')
   const [message, setMessage] = useState({
     legs: '',
@@ -17,20 +12,21 @@ const Results = ({
     carbon: '',
   })
 
-  useEffect(
-    (oneway, departure_airport, destination_airport, distance, carbon) => {
-      new TickerBoard('.create-ticker')
-      oneway ? setLegs('one way') : setLegs('return')
-      setMessage({
-        legs: legs,
-        departure_airport: departure_airport,
-        destination_airport: destination_airport,
-        distance: distance,
-        carbon: carbon,
-      })
-    },
-    []
-  )
+
+  // useEffect(
+  //   (oneway, departure_airport, destination_airport, distance, carbon) => {
+  //     new TickerBoard('.create-ticker')
+  //     oneway ? setLegs('one way') : setLegs('return')
+  //     setMessage({
+  //       legs: legs,
+  //       departure_airport: departure_airport,
+  //       destination_airport: destination_airport,
+  //       distance: distance,
+  //       carbon: carbon,
+  //     })
+  //   },
+  //   []
+  // )
 
   return (
     <div>
