@@ -60,6 +60,7 @@ const Flights = () => {
     }
   }
 
+
   const handleSubmit = async (event) => {
     event.preventDefault()
     getEstimate(data).then(setResult).catch(handleError)
@@ -82,14 +83,14 @@ const Flights = () => {
           <label for='departure airport'>Departure airport:</label>
           <input
             type='text'
-            placeholder='Where are you flying from?'
+            placeholder='IATA code here e.g LAX'
             name='departure airport'
             onChange={handleDepartureAirportChange}
           />
           <label for='arrival airport'>Arrival airport:</label>
           <input
             type='text'
-            placeholder='Where are you flying to?'
+            placeholder='IATA code here e.g LHR'
             name='arrival airport'
             onChange={handleDestinationAirportChange}
           />
@@ -118,6 +119,7 @@ const Flights = () => {
           />
         </div>
       </form>
+
       {submitted ? (
         <Results
           oneway={oneway}
@@ -128,10 +130,11 @@ const Flights = () => {
       ) : (
         <></>
       )}
+
+    <p className='result'>To offset this journey you would need to plant {(result.carbon_kg / 24).toFixed(2)} trees</p>
     </div>
   )
 }
-
 export default Flights
 
 // departureAirport={data.legs[0].departure_airport}

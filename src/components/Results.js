@@ -40,6 +40,7 @@ const Results = ({ result, data, oneway, submitted }) => {
 
   console.log(message)
 
+
   return (
     <div className='tickerboard'>
       {ticker ? (

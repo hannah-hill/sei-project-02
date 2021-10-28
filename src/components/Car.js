@@ -126,6 +126,7 @@ const Car = () => {
         </div>
       </form>
       <p>Carbon footprint: {result.carbon_kg}kg</p>
+      <p>To offset this journey you would need to plant {(result.carbon_kg / 24).toFixed(2)} trees</p>
     </div>
   )
 }

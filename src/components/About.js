@@ -1,5 +1,7 @@
 const About = () => {
   return (
+
+
     <div className='about-section'>
       <h1>About cautious telegram</h1>
       <p>
