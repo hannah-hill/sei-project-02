@@ -5,6 +5,7 @@ import Nav from './components/Nav'
 import Home from './components/Home'
 import About from './components/About'
 import Car from './components/Car'
+import Results from './components/Results'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route exact path='/' component={Home} />
             <Route path='/about' component={About} />
             <Route path='/car' component={Car} />
+            <Route path='/results' component={Results} />
           </main>
         </div>
       </Router>
