@@ -1,10 +1,44 @@
 header {
-  background-color: #282c34;
-  height: 100px;
+  background-color: $light-blue;
+  height: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  color: white;
-  margin-bottom: 30px;
+  justify-content: flex-end;
+  color: $white;
+}
+
+h1 {
+  position: relative;
+  top: 20px;
+}
+
+.plane {
+  background-image: url("../assets/plane.png");
+  background-size: contain;
+  height: 150px;
+  width: 100px;
+  background-repeat: no-repeat;
+  animation: flying 30s infinite linear;
+  position: relative;
+  top: -40px;
+  left: -500px;
+}
+
+@keyframes flying {
+  0% {
+    transform: translateX(-10vw);
+  }
+  45% {
+    transform: translateX(110vw);
+  }
+  50% {
+    transform: translateX(110vw) rotateY(180deg);
+  }
+  95% {
+    transform: translateX(-10vw) rotateY(180deg);
+  }
+  100% {
+    transform: translateX(-10vw) rotateY(0deg);
+  }
 }

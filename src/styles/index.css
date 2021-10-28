@@ -1,40 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap");
 header {
-  background-color: #282c34;
-  height: 100px;
+  background-color: #00a8e8;
+  height: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  color: white;
-  margin-bottom: 30px;
+  justify-content: flex-end;
+  color: #ffffff;
 }
 
+h1 {
+  position: relative;
+  top: 20px;
+}
+
+.plane {
+  background-image: url("../assets/plane.png");
+  background-size: contain;
+  height: 150px;
+  width: 100px;
+  background-repeat: no-repeat;
+  animation: flying 30s infinite linear;
+  position: relative;
+  top: -40px;
+  left: -500px;
+}
+
+@keyframes flying {
+  0% {
+    transform: translateX(-10vw);
+  }
+  45% {
+    transform: translateX(110vw);
+  }
+  50% {
+    transform: translateX(110vw) rotateY(180deg);
+  }
+  95% {
+    transform: translateX(-10vw) rotateY(180deg);
+  }
+  100% {
+    transform: translateX(-10vw) rotateY(0deg);
+  }
+}
 .flight-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: "Zen Antique Soft", serif;
+  border: 1px solid #00171f;
+  width: 300px;
+  padding: 20px 0px;
+  border-radius: 10px;
+  background-color: #ffffff;
 }
 
 .flight-form input {
   margin: 10px;
 }
 
+form {
+  display: flex;
+  justify-content: center;
+}
+
+.car-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Zen Antique Soft", serif;
+  border: 1px solid #00171f;
+  width: 300px;
+  padding: 20px 0px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+.car-form .car-radios {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  padding: 10px 0px;
+}
+.car-form .car-radios div {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0px;
+}
+
+.submit-button {
+  background-color: #00a8e8;
+  color: #ffffff;
+  padding: 3px 10px;
+  border: 1px solid #00a8e8;
+  border-radius: 18px;
+}
+
+.submit-button:hover {
+  box-shadow: 1px 1px 10px #00a8e8;
+}
+
 nav {
-  margin: 20px 0px;
-  background-color: blue;
+  background-color: #003459;
   width: 100vw;
 }
 nav ul {
   display: flex;
   justify-content: space-between;
+  padding: 0px 20px;
 }
 nav ul li {
   list-style: none;
+  padding: 2px;
 }
 nav ul li a {
   font-size: 20px;
   color: white;
+  text-decoration: none;
+  font-family: "Zen Antique Soft", serif;
+}
+nav ul li a:hover {
+  color: #00a8e8;
+  text-shadow: 1px 1px 10px #00a8e8;
+}
+
+.footer {
+  background-color: #00171f;
+  color: #ffffff;
+}
+.footer .footer-names {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 0px;
+}
+.footer .footer-socials {
+  display: flex;
+  justify-content: space-around;
+}
+.footer .hannah-social,
+.footer .james-social {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+.footer h4 {
+  font-size: 18px;
+}
+
+.home-section {
+  padding: 0px;
+}
+.home-section h1 {
+  padding: 20px;
+}
+
+.about-section {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-section h1 {
+  padding: 0px;
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+  width: 400px;
+  margin-bottom: 30px;
+}
+.about-section p {
+  width: 800px;
+  padding-bottom: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+main {
+  background-color: #007ea7;
+  padding-top: 40px;
+  height: 80vh;
 }
 
 /*# sourceMappingURL=index.css.map */

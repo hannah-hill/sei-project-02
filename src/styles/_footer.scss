@@ -1,0 +1,26 @@
+.footer {
+  background-color: $black;
+  color: $white;
+
+  .footer-names {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 0px;
+  }
+
+  .footer-socials {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .hannah-social,
+  .james-social {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+}

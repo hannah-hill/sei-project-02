@@ -1,3 +1,19 @@
-@use 'header';
-@use 'form';
-@use 'nav';
+@import "colors";
+@import "fonts";
+@import "header";
+@import "form";
+@import "nav";
+@import "footer";
+@import "home";
+@import "about";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+main {
+  background-color: $mid-blue;
+  padding-top: 40px;
+  height: 80vh;
+}
