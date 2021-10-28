@@ -1,8 +1,10 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { getEstimate } from '../helpers/api.js'
+import Results from './Results.js'
 
 const Flights = () => {
+  const [oneway, setOneway] = useState(true)
   const [errorMessage, setErrorMessage] = useState({})
   const [error, setError] = useState(false)
   const [result, setResult] = useState([])
@@ -39,8 +41,10 @@ const Flights = () => {
 
   const handleReturnJourney = (event) => {
     if (event.target.value === 'one-way') {
+      setOneway(true)
       return
     } else if (event.target.value === 'return') {
+      setOneway(false)
       data.legs.push({
         departure_airport: data.legs[0].destination_airport,
         destination_airport: data.legs[0].departure_airport,
@@ -108,7 +112,13 @@ const Flights = () => {
           <input className="submit-button" type='submit' value='submit flight info' />
         </div>
       </form>
-
+      <Results
+        departureAirport={data.legs[0].departure_airport}
+        destinationAirport={data.legs[0].destination_airport}
+        oneway={oneway}
+        distance={result.distance_value}
+        carbon={result.carbon_kg}
+      />
       <p>Flight distance: {result.distance_value}km</p>
       <p>Carbon footprint: {result.carbon_kg}kg</p>
     </div>
