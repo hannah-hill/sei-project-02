@@ -8,7 +8,6 @@ import Car from './components/Car'
 import Footer from './components/Footer'
 import Results from './components/Results'
 
-
 function App() {
   return (
     <>
@@ -16,7 +15,7 @@ function App() {
         <div className='App'>
           <header className='App-header'>
             <h1>cautious telegram</h1>
-            <div className="plane"></div>
+            <div className='plane'></div>
             <Nav />
           </header>
           <main>
