@@ -1,0 +1,19 @@
+.about-section {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    padding: 0px;
+    color: $white;
+    border-bottom: 1px solid $white;
+    width: 400px;
+    margin-bottom: 30px;
+  }
+
+  p {
+    width: 800px;
+    padding-bottom: 10px;
+  }
+}

@@ -105,7 +105,7 @@ const Flights = () => {
               onChange={handleReturnJourney}
             />
           </div>
-          <input type='submit' value='submit flight info' />
+          <input className="submit-button" type='submit' value='submit flight info' />
         </div>
       </form>
 

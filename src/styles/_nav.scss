@@ -1,18 +1,26 @@
 nav {
-  margin: 20px 0px;
-  background-color: blue;
+  background-color: $dark-blue;
   width: 100vw;
 
   ul {
     display: flex;
     justify-content: space-between;
+    padding: 0px 20px;
 
     li {
       list-style: none;
+      padding: 2px;
 
       a {
         font-size: 20px;
         color: white;
+        text-decoration: none;
+        font-family: $antique;
+      }
+
+      a:hover {
+        color: $light-blue;
+        text-shadow: 1px 1px 10px $light-blue;
       }
     }
   }
