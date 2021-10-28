@@ -5,6 +5,7 @@ import Results from './Results.js'
 
 const Flights = () => {
   const [oneway, setOneway] = useState(true)
+  const [submitted, setSubmitted] = useState(false)
   const [errorMessage, setErrorMessage] = useState({})
   const [error, setError] = useState(false)
   const [result, setResult] = useState([])
@@ -62,10 +63,11 @@ const Flights = () => {
   const handleSubmit = async (event) => {
     event.preventDefault()
     getEstimate(data).then(setResult).catch(handleError)
+    setSubmitted(true)
   }
 
   console.log(result)
-
+  console.log(data)
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -109,20 +111,30 @@ const Flights = () => {
               onChange={handleReturnJourney}
             />
           </div>
-          <input className="submit-button" type='submit' value='submit flight info' />
+          <input
+            className='submit-button'
+            type='submit'
+            value='submit flight info'
+          />
         </div>
       </form>
-      <Results
-        departureAirport={data.legs[0].departure_airport}
-        destinationAirport={data.legs[0].destination_airport}
-        oneway={oneway}
-        distance={result.distance_value}
-        carbon={result.carbon_kg}
-      />
-      <p>Flight distance: {result.distance_value}km</p>
-      <p>Carbon footprint: {result.carbon_kg}kg</p>
+      {submitted ? (
+        <Results
+          oneway={oneway}
+          result={result}
+          data={data}
+          submitted={submitted}
+        />
+      ) : (
+        <></>
+      )}
     </div>
   )
 }
 
 export default Flights
+
+// departureAirport={data.legs[0].departure_airport}
+// destinationAirport={data.legs[0].destination_airport}
+// distance={result.distance_value}
+// carbon={result.carbon_kg}
