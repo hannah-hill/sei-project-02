@@ -14,10 +14,10 @@ function App() {
       <Router>
         <div className='App'>
           <header className='App-header'>
-            <h1>cautious telegram</h1>
             <div className='plane'></div>
             <Nav />
           </header>
+          <div className='logo'></div>
           <main>
             <Route path='/flight' component={Flights} />
             <Route exact path='/' component={Home} />

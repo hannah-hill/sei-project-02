@@ -5,7 +5,7 @@ export const getEstimate = async (data) => {
     method: 'post',
     url: 'https://www.carboninterface.com/api/v1/estimates',
     headers: {
-      Authorization: 'Bearer gJaaycEi2IcMN6y6x4Obdg',
+      Authorization: 'Bearer Pnzk90BwOSNgzTAucaepg',
       'Content-Type': 'application/json',
     },
     data,

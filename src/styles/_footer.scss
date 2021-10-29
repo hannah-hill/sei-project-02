@@ -1,6 +1,8 @@
 .footer {
   background-color: $black;
   color: $white;
+  font-family: $nav;
+  padding: 20px;
 
   .footer-names {
     display: flex;
@@ -11,6 +13,14 @@
   .footer-socials {
     display: flex;
     justify-content: space-around;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   }
 
   .hannah-social,

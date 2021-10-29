@@ -3,7 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  font-family: $main;
+  font-family: $nav;
 
   width: 100%;
   padding: 20px 0px;
@@ -51,22 +51,189 @@
   }
 
   .submit-button {
-    height: 90%;
+    line-height: 2;
     border-radius: 5px;
-    border: 1px solid blue;
+    border: 1px solid white;
+    background: white;
+    padding: 10px 20px;
+    margin: 10px;
+    color: $dark-blue;
+    font-family: $nav;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .submit-button:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 10px $light-blue;
   }
   .submit {
     width: 10%;
   }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+.car-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: $nav;
+
+  width: 100%;
+  padding: 20px 0px;
+  border-radius: 3px;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  color: white;
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 10px;
+
+    input {
+      width: 100%;
+      line-height: 2;
+      margin-top: 0;
+      background: none;
+      border: none;
+      border-bottom: 2px solid white;
+      color: white;
+      padding: 10px 5px;
+    }
+    label {
+      text-align: left;
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+  }
+  .radio {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 0 40px;
+
+    div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    label {
+      width: 70%;
+      text-align: left;
+    }
+  }
+
+  .submit-button {
+    line-height: 2;
+    border-radius: 5px;
+    border: 1px solid white;
+    background: white;
+    padding: 10px 20px;
+    margin: 10px;
+    color: $dark-blue;
+    font-family: $nav;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    width: 150px;
+  }
+  .submit-button:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 10px $light-blue;
+  }
+  .submit {
+    width: 10%;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
 }
 
-/* Firefox */
-input[type='number'] {
-  -moz-appearance: textfield;
+.result-section {
+  background-color: white;
+  border: 1px solid $black;
+  width: 400px;
+  height: 100px;
+  padding: 0px 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px $black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+  .result {
+    width: 320px;
+    margin: 0px 5px;
+    position: relative;
+    top: -8px;
+  }
+
+  .tree {
+    background-image: url('../assets/moving_tree.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 80px;
+    width: 80px;
+  }
+}
+
+.car-result-section {
+  background-color: white;
+  border: 1px solid $black;
+  margin: 50px auto;
+  width: 500px;
+  padding: 0px 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px $black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .car-result {
+    width: 320px;
+    margin: 0px 5px;
+  }
+
+  .car-tree {
+    background-image: url('../assets/moving_tree.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 80px;
+    width: 80px;
+  }
+}
+
+.reload-button {
+  background-color: $light-blue;
+  color: $white;
+  padding: 3px 10px;
+  border: 1px solid $light-blue;
+  border-radius: 18px;
+  position: relative;
+  top: -30px;
 }

@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=BioRhyme:wght@800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
-
-
 header {
   background-color: #00a8e8;
   height: 120px;
@@ -19,15 +17,25 @@ h1 {
   font-family: "BioRhyme", serif;
 }
 
+.logo {
+  background-image: url("../assets/footprint2.png");
+  height: 90px;
+  width: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 2px;
+  left: 45%;
+}
+
 .plane {
-  background-image: url("../assets/plane.png");
+  background-image: url("../assets/plane2.png");
   background-size: contain;
   height: 150px;
   width: 100px;
   background-repeat: no-repeat;
   animation: flying 30s infinite linear;
   position: relative;
-  top: -40px;
   left: -800px;
 }
 
@@ -53,12 +61,13 @@ h1 {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Varela Round", sans-serif;
   width: 100%;
   padding: 20px 0px;
   border-radius: 3px;
   background-color: rgba(0, 0, 0, 0.4);
   color: white;
+  /* Firefox */
 }
 .flight-form .field {
   display: flex;
@@ -97,22 +106,113 @@ h1 {
   width: 50%;
 }
 .flight-form .submit-button {
-  height: 90%;
+  line-height: 2;
   border-radius: 5px;
-  border: 1px solid blue;
+  border: 1px solid white;
+  background: white;
+  padding: 10px 20px;
+  margin: 10px;
+  color: #003459;
+  font-family: "Varela Round", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.flight-form .submit-button:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 10px #00a8e8;
 }
 .flight-form .submit {
   width: 10%;
 }
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+.flight-form input::-webkit-outer-spin-button,
+.flight-form input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+.flight-form input[type=number] {
+  -moz-appearance: textfield;
+}
 
-/* Firefox */
-input[type=number] {
+.car-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: "Varela Round", sans-serif;
+  width: 100%;
+  padding: 20px 0px;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  /* Firefox */
+}
+.car-form .field {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 10px;
+}
+.car-form .field input {
+  width: 100%;
+  line-height: 2;
+  margin-top: 0;
+  background: none;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  padding: 10px 5px;
+}
+.car-form .field label {
+  text-align: left;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.car-form .radio {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 0 40px;
+}
+.car-form .radio div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.car-form .radio label {
+  width: 70%;
+  text-align: left;
+}
+.car-form .submit-button {
+  line-height: 2;
+  border-radius: 5px;
+  border: 1px solid white;
+  background: white;
+  padding: 10px 20px;
+  margin: 10px;
+  color: #003459;
+  font-family: "Varela Round", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  width: 150px;
+}
+.car-form .submit-button:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 10px #00a8e8;
+}
+.car-form .submit {
+  width: 10%;
+}
+.car-form input::-webkit-outer-spin-button,
+.car-form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.car-form input[type=number] {
   -moz-appearance: textfield;
 }
 
@@ -146,7 +246,7 @@ input[type=number] {
 .car-result-section {
   background-color: white;
   border: 1px solid #00171f;
-  margin-top: 50px;
+  margin: 50px auto;
   width: 500px;
   padding: 0px 10px;
   border-radius: 10px;
@@ -185,14 +285,15 @@ nav ul {
   display: flex;
   justify-content: space-between;
   padding: 0px 20px;
-  margin: 0px 80px;
+  margin: 0px auto;
+  width: 50%;
 }
 nav ul li {
   list-style: none;
   padding: 2px;
 }
 nav ul li a {
-  font-size: 20px;
+  font-size: 16px;
   color: white;
   text-decoration: none;
   font-family: "Varela Round", sans-serif;
@@ -205,6 +306,8 @@ nav ul li a:hover {
 .footer {
   background-color: #00171f;
   color: #ffffff;
+  font-family: "Varela Round", sans-serif;
+  padding: 20px;
 }
 .footer .footer-names {
   display: flex;
@@ -214,6 +317,13 @@ nav ul li a:hover {
 .footer .footer-socials {
   display: flex;
   justify-content: space-around;
+}
+.footer .footer-socials a {
+  color: white;
+  text-decoration: none;
+}
+.footer .footer-socials a:hover {
+  text-decoration: underline;
 }
 .footer .hannah-social,
 .footer .james-social {
@@ -227,6 +337,8 @@ nav ul li a:hover {
 
 .home-section {
   padding: 0px;
+  font-family: "Varela Round", sans-serif;
+  color: #8f8383;
 }
 .home-section h1 {
   padding: 0px;
@@ -240,6 +352,7 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Varela Round", sans-serif;
 }
 .about-section h1 {
   padding: 0px;
@@ -251,6 +364,10 @@ nav ul li a:hover {
 .about-section p {
   width: 800px;
   padding-bottom: 10px;
+}
+.about-section a {
+  color: white;
+  text-decoration: none;
 }
 
 .tickerboard {
@@ -269,7 +386,8 @@ nav ul li a:hover {
 }
 
 main {
-  background-color: #007ea7;
+  background: #007ea7;
+  background: radial-gradient(circle, #007ea7 0%, #003459 100%);
   padding-top: 40px;
   height: 80vh;
   display: flex;

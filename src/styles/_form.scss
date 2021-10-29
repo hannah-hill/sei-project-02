@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: $main;
+  font-family: $antique;
   border: 1px solid $black;
   width: 300px;
   padding: 20px 0px;
@@ -25,7 +25,7 @@ form {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: $main;
+  font-family: $antique;
   border: 1px solid $black;
   width: 300px;
   padding: 20px 0px;
@@ -63,8 +63,7 @@ form {
   width: 300px;
 }
 
-.result-section
-
+.result-section {
   background-color: white;
   border: 1px solid $black;
   width: 400px;
@@ -85,7 +84,7 @@ form {
   }
 
   .tree {
-    background-image: url("../assets/moving_tree.gif");
+    background-image: url('../assets/moving_tree.gif');
     background-size: contain;
     background-repeat: no-repeat;
     height: 80px;
@@ -96,7 +95,7 @@ form {
 .car-result-section {
   background-color: white;
   border: 1px solid $black;
-  margin-top: 50px;
+  margin: 50px auto;
   width: 500px;
   padding: 0px 10px;
   border-radius: 10px;
@@ -111,7 +110,7 @@ form {
   }
 
   .car-tree {
-    background-image: url("../assets/moving_tree.gif");
+    background-image: url('../assets/moving_tree.gif');
     background-size: contain;
     background-repeat: no-repeat;
     height: 80px;
@@ -127,6 +126,7 @@ form {
   border-radius: 18px;
   position: relative;
   top: -30px;
+}
 
 .flight-form input {
   border: none;

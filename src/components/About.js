@@ -1,7 +1,5 @@
 const About = () => {
   return (
-
-
     <div className='about-section'>
       <h1>About footprint</h1>
       <p>
@@ -9,12 +7,17 @@ const About = () => {
         Software Engineering Course.
       </p>
       <p>
-        footprint gives users the means to see the impact their travels
-        have on the environment, and learn what they would need to do in order
-        to offset their carbon footprint.
+        footprint gives users the means to see the impact their travels have on
+        the environment, and learn what they would need to do in order to offset
+        their carbon footprint.
       </p>
       <p>
-        We would like to thank Robin Kerrison for allowing us the use of his tickerboard plug-in.
+        We would like to thank Robin Kerrison for allowing us the use of his{' '}
+        <a href='https://github.com/rjkerrison/ticker-board'>
+          {' '}
+          tickerboard plug-in
+        </a>
+        .
       </p>
     </div>
   )

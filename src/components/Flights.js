@@ -117,36 +117,35 @@ const Flights = () => {
               onChange={handleReturnJourney}
             />
           </div>
-          <div className='field submit'>
-            <input className='submit-button' type='submit' value='submit' />
-          </div>
+          {/* <div className='field submit'> */}
+          <input className='submit-button' type='submit' value='submit' />
+          {/* </div> */}
         </div>
       </form>
 
       {submitted ? (
-        <Results
-          oneway={oneway}
-          result={result}
-          data={data}
-          submitted={submitted}
-        />
+        <div>
+          <Results
+            oneway={oneway}
+            result={result}
+            data={data}
+            submitted={submitted}
+          />
+          <div className='result-section'>
+            <div className='tree'></div>
+            <p className='result'>
+              To offset this journey you would need to plant{' '}
+              {(result.carbon_kg / 24).toFixed(2)} trees
+            </p>
+            <div className='tree'></div>
+          </div>
+          <button className='reload-button'>Search Another Flight?</button>
+        </div>
       ) : (
         <></>
       )}
-
-
-    <div className="result-section">
-      <div className="tree"></div>
-      <p className='result'>To offset this journey you would need to plant {(result.carbon_kg / 24).toFixed(2)} trees</p>
-      <div className="tree"></div>
-      </div>
-      <button className="reload-button">Search Another Flight?</button>
     </div>
   )
 }
-export default Flights
 
-// departureAirport={data.legs[0].departure_airport}
-// destinationAirport={data.legs[0].destination_airport}
-// distance={result.distance_value}
-// carbon={result.carbon_kg}
+export default Flights
