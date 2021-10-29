@@ -37,8 +37,6 @@ const Car = () => {
     console.log(data)
   }
 
-  console.log(result)
-
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -115,7 +113,7 @@ const Car = () => {
             <p>Carbon footprint for this journey: {result.carbon_kg}kg</p>
             <p className='car-result'>
               To offset this journey you would need to plant{' '}
-              {(result.carbon_kg / 24).toFixed(2)} trees
+              <span>{(result.carbon_kg / 24).toFixed(2)} trees</span>
             </p>
           </div>
           <div className='car-tree'></div>

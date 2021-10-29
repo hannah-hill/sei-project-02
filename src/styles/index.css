@@ -63,7 +63,7 @@ h1 {
   justify-content: space-evenly;
   font-family: "Varela Round", sans-serif;
   width: 100%;
-  padding: 20px 0px;
+  padding: 20px 10px;
   border-radius: 3px;
   background-color: rgba(0, 0, 0, 0.4);
   color: white;
@@ -141,7 +141,7 @@ h1 {
   justify-content: space-evenly;
   font-family: "Varela Round", sans-serif;
   width: 100%;
-  padding: 20px 0px;
+  padding: 20px 10px;
   border-radius: 3px;
   background-color: rgba(0, 0, 0, 0.4);
   color: white;
@@ -181,10 +181,13 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 4px;
 }
 .car-form .radio label {
   width: 70%;
   text-align: left;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 .car-form .submit-button {
   line-height: 2;
@@ -228,6 +231,7 @@ h1 {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  font-family: "Varela Round", sans-serif;
 }
 .result-section .result {
   width: 320px;
@@ -242,6 +246,9 @@ h1 {
   height: 80px;
   width: 80px;
 }
+.result-section span {
+  color: green;
+}
 
 .car-result-section {
   background-color: white;
@@ -254,6 +261,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Varela Round", sans-serif;
 }
 .car-result-section .car-result {
   width: 320px;
@@ -266,6 +274,9 @@ h1 {
   height: 80px;
   width: 80px;
 }
+.car-result-section span {
+  color: green;
+}
 
 .reload-button {
   background-color: #00a8e8;
@@ -275,6 +286,17 @@ h1 {
   border-radius: 18px;
   position: relative;
   top: -30px;
+  font-family: "Varela Round", sans-serif;
+}
+
+.airport-codes {
+  margin: 50px auto;
+  font-family: "Varela Round", sans-serif;
+  color: white;
+  font-size: 14px;
+}
+.airport-codes a {
+  color: white;
 }
 
 nav {
@@ -338,7 +360,7 @@ nav ul li a:hover {
 .home-section {
   padding: 0px;
   font-family: "Varela Round", sans-serif;
-  color: #8f8383;
+  color: white;
 }
 .home-section h1 {
   padding: 0px;
@@ -362,8 +384,10 @@ nav ul li a:hover {
   margin-bottom: 30px;
 }
 .about-section p {
-  width: 800px;
+  width: 700px;
   padding-bottom: 10px;
+  color: white;
+  margin-top: 20px;
 }
 .about-section a {
   color: white;

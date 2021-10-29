@@ -66,6 +66,10 @@ const Flights = () => {
     setSubmitted(true)
   }
 
+  const handleReload = (event) => {
+    window.location.reload()
+  }
+
   console.log(result)
   console.log(data)
   return (
@@ -117,12 +121,10 @@ const Flights = () => {
               onChange={handleReturnJourney}
             />
           </div>
-          {/* <div className='field submit'> */}
+
           <input className='submit-button' type='submit' value='submit' />
-          {/* </div> */}
         </div>
       </form>
-
       {submitted ? (
         <div>
           <Results
@@ -135,14 +137,23 @@ const Flights = () => {
             <div className='tree'></div>
             <p className='result'>
               To offset this journey you would need to plant{' '}
-              {(result.carbon_kg / 24).toFixed(2)} trees
+              <span> {(result.carbon_kg / 24).toFixed(2)} trees </span>
             </p>
             <div className='tree'></div>
           </div>
-          <button className='reload-button'>Search Another Flight?</button>
+          <button className='reload-button' onClick={handleReload}>
+            Search Another Flight?
+          </button>
         </div>
       ) : (
-        <></>
+        <div className='airport-codes'>
+          <p>
+            Find your three-letter IATA airport code{' '}
+            <a href='https://www.world-airport-codes.com' target='_blank'>
+              here
+            </a>
+          </p>
+        </div>
       )}
     </div>
   )
