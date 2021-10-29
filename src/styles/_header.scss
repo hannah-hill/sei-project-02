@@ -15,7 +15,7 @@ h1 {
 }
 
 .plane {
-  background-image: url('../assets/plane.png');
+  background-image: url("../assets/plane.png");
   background-size: contain;
   height: 150px;
   width: 100px;
@@ -23,7 +23,7 @@ h1 {
   animation: flying 30s infinite linear;
   position: relative;
   top: -40px;
-  left: -500px;
+  left: -800px;
 }
 
 @keyframes flying {

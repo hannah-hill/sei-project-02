@@ -125,8 +125,15 @@ const Car = () => {
         <input className="submit-button" type='submit' value='submit journey info' />
         </div>
       </form>
-      <p>Carbon footprint: {result.carbon_kg}kg</p>
-      <p>To offset this journey you would need to plant {(result.carbon_kg / 24).toFixed(2)} trees</p>
+      <div className="car-result-section">
+      <div className="car-tree"></div>
+      <div className="car-result-text">
+      <p>Carbon footprint for this journey: {result.carbon_kg}kg</p>
+      <p className="car-result">To offset this journey you would need to plant {(result.carbon_kg / 24).toFixed(2)} trees
+      </p>
+      </div>
+      <div className="car-tree"></div>
+      </div>
     </div>
   )
 }
