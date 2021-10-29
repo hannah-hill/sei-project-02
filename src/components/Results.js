@@ -35,11 +35,12 @@ const Results = ({ result, data, oneway, submitted }) => {
   }, [message])
 
   useEffect(() => {
-    new TickerBoard('.create-ticker')
+    new TickerBoard('.create-ticker', {
+      theme: 'dark',
+    })
   }, [ticker])
 
   console.log(message)
-
 
   return (
     <div className='tickerboard'>
