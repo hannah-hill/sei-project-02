@@ -1,0 +1,72 @@
+.flight-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: $main;
+
+  width: 100%;
+  padding: 20px 0px;
+  border-radius: 3px;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  color: white;
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    width: (75% / 3);
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 10px;
+
+    input {
+      width: 100%;
+      line-height: 2;
+      margin-top: 0;
+      background: none;
+      border: none;
+      border-bottom: 2px solid white;
+      color: white;
+      padding: 10px 5px;
+    }
+    label {
+      text-align: left;
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+  }
+  .radio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 15%;
+
+    input {
+      width: 30%;
+    }
+    label {
+      width: 50%;
+    }
+  }
+
+  .submit-button {
+    height: 90%;
+    border-radius: 5px;
+    border: 1px solid blue;
+  }
+  .submit {
+    width: 10%;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}

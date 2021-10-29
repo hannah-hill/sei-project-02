@@ -60,7 +60,6 @@ const Flights = () => {
     }
   }
 
-
   const handleSubmit = async (event) => {
     event.preventDefault()
     getEstimate(data).then(setResult).catch(handleError)
@@ -73,28 +72,34 @@ const Flights = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <div className='flight-form'>
-          <label for='passengers'>Number of passengers:</label>
-          <input
-            type='number'
-            name='passengers'
-            value={data.passengers}
-            onChange={handleFormChange}
-          />
-          <label for='departure airport'>Departure airport:</label>
-          <input
-            type='text'
-            placeholder='IATA code here e.g LAX'
-            name='departure airport'
-            onChange={handleDepartureAirportChange}
-          />
-          <label for='arrival airport'>Arrival airport:</label>
-          <input
-            type='text'
-            placeholder='IATA code here e.g LHR'
-            name='arrival airport'
-            onChange={handleDestinationAirportChange}
-          />
-          <div>
+          <div className='field'>
+            <label for='passengers'>Passengers:</label>
+            <input
+              type='number'
+              name='passengers'
+              value={data.passengers}
+              onChange={handleFormChange}
+            />
+          </div>
+          <div className='field'>
+            <label for='departure airport'>Departure airport:</label>
+            <input
+              type='text'
+              placeholder='IATA code here e.g LAX'
+              name='departure airport'
+              onChange={handleDepartureAirportChange}
+            />
+          </div>
+          <div className='field'>
+            <label for='arrival airport'>Arrival airport:</label>
+            <input
+              type='text'
+              placeholder='IATA code here e.g LHR'
+              name='arrival airport'
+              onChange={handleDestinationAirportChange}
+            />
+          </div>
+          <div className='field radio'>
             <label for='one-way'>One-way</label>
             <input
               type='radio'
@@ -112,11 +117,9 @@ const Flights = () => {
               onChange={handleReturnJourney}
             />
           </div>
-          <input
-            className='submit-button'
-            type='submit'
-            value='submit flight info'
-          />
+          <div className='field submit'>
+            <input className='submit-button' type='submit' value='submit' />
+          </div>
         </div>
       </form>
 
@@ -131,13 +134,13 @@ const Flights = () => {
         <></>
       )}
 
+
     <div className="result-section">
       <div className="tree"></div>
       <p className='result'>To offset this journey you would need to plant {(result.carbon_kg / 24).toFixed(2)} trees</p>
       <div className="tree"></div>
       </div>
       <button className="reload-button">Search Another Flight?</button>
-
     </div>
   )
 }
