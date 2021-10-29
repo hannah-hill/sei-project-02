@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <div className='about-section'>
-      <h1>About footprint</h1>
+      <h1>about footprint</h1>
       <p>
         This is a joint project by Hannah and James on their General Assembly
         Software Engineering Course.

@@ -1,6 +1,7 @@
 nav {
   background-color: $dark-blue;
   width: 100vw;
+  line-height: 2;
 
   ul {
     display: flex;
@@ -18,6 +19,8 @@ nav {
         color: white;
         text-decoration: none;
         font-family: $nav;
+        text-transform: uppercase;
+        letter-spacing: -0.7px;
       }
 
       a:hover {

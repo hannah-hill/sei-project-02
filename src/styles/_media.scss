@@ -1,0 +1,39 @@
+@media screen and (max-width: 600px) {
+  header {
+    height: 200px;
+    position: relative;
+
+    .plane {
+      display: none;
+    }
+    h1 {
+      position: absolute;
+      display: block;
+      padding: 0;
+    }
+  }
+  .logo {
+    display: none;
+  }
+
+  nav {
+    ul {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .flight-form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .field {
+      width: 80%;
+    }
+  }
+
+  footer {
+    position: static;
+  }
+}
