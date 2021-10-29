@@ -9,7 +9,7 @@
   padding: 20px 0px;
   border-radius: 10px;
   background-color: $white;
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: "Libre Franklin", sans-serif;
 }
 
 .flight-form input {
@@ -62,4 +62,69 @@ form {
 .airport-list {
   margin: 20px 0px;
   width: 300px;
+}
+
+.result-section {
+  background-color: white;
+  border: 1px solid $black;
+  width: 400px;
+  height: 100px;
+  padding: 0px 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px $black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+  .result {
+    width: 320px;
+    margin: 0px 5px;
+    position: relative;
+    top: -8px;
+  }
+
+  .tree {
+    background-image: url("../assets/moving_tree.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 80px;
+    width: 80px;
+  }
+}
+
+.car-result-section {
+  background-color: white;
+  border: 1px solid $black;
+  margin-top: 50px;
+  width: 500px;
+  padding: 0px 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px $black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .car-result {
+    width: 320px;
+    margin: 0px 5px;
+  }
+
+  .car-tree {
+    background-image: url("../assets/moving_tree.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 80px;
+    width: 80px;
+  }
+}
+
+.reload-button {
+  background-color: $light-blue;
+  color: $white;
+  padding: 3px 10px;
+  border: 1px solid $light-blue;
+  border-radius: 18px;
+  position: relative;
+  top: -30px;
 }

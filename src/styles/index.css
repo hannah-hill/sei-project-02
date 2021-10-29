@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=BioRhyme:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 header {
   background-color: #00a8e8;
   height: 120px;
@@ -25,7 +26,7 @@ h1 {
   animation: flying 30s infinite linear;
   position: relative;
   top: -40px;
-  left: -500px;
+  left: -800px;
 }
 
 @keyframes flying {
@@ -109,6 +110,67 @@ form {
   width: 300px;
 }
 
+.result-section {
+  background-color: white;
+  border: 1px solid #00171f;
+  width: 400px;
+  height: 100px;
+  padding: 0px 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px #00171f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.result-section .result {
+  width: 320px;
+  margin: 0px 5px;
+  position: relative;
+  top: -8px;
+}
+.result-section .tree {
+  background-image: url("../assets/moving_tree.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 80px;
+  width: 80px;
+}
+
+.car-result-section {
+  background-color: white;
+  border: 1px solid #00171f;
+  margin-top: 50px;
+  width: 500px;
+  padding: 0px 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px #00171f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.car-result-section .car-result {
+  width: 320px;
+  margin: 0px 5px;
+}
+.car-result-section .car-tree {
+  background-image: url("../assets/moving_tree.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 80px;
+  width: 80px;
+}
+
+.reload-button {
+  background-color: #00a8e8;
+  color: #ffffff;
+  padding: 3px 10px;
+  border: 1px solid #00a8e8;
+  border-radius: 18px;
+  position: relative;
+  top: -30px;
+}
+
 nav {
   background-color: #003459;
   width: 100vw;
@@ -127,7 +189,7 @@ nav ul li a {
   font-size: 20px;
   color: white;
   text-decoration: none;
-  font-family: "Zen Antique Soft", serif;
+  font-family: "Varela Round", sans-serif;
 }
 nav ul li a:hover {
   color: #00a8e8;
@@ -161,7 +223,10 @@ nav ul li a:hover {
   padding: 0px;
 }
 .home-section h1 {
-  padding: 20px;
+  padding: 0px;
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+  margin-bottom: 30px;
 }
 
 .about-section {
